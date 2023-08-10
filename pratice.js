@@ -1,9 +1,11 @@
-var clickCount = 0;
-var clickTextElement = document.getElementById("clickText");
+var button = document.getElementById("myButton");
 
-function updateClickCount() {
-  clickCount++;
-  clickTextElement.textContent = "click: " + clickCount;
-}
-
-clickTextElement.addEventListener("click", updateClickCount);
+button.addEventListener("click", function () {
+  if (button.textContent === "확인") {
+    button.textContent = "취소";
+    button.style.backgroundColor = "red";
+  } else {
+    button.textContent = "확인";
+    button.style.backgroundColor = "blue";
+  }
+});
